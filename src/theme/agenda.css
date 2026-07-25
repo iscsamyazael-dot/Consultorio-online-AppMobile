@@ -1,0 +1,3462 @@
+/* =====================================================
+   HEADER AGENDA
+===================================================== */
+
+.agenda-header{
+
+    background:var(--color-background);
+    padding:var(--space-lg) var(--screen-padding) var(--space-lg);
+    
+
+}
+
+.agenda-header .top-bar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+.agenda-header .right-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:var(--space-xs);
+
+}
+
+.agenda-header ion-button{
+
+    --color:var(--color-text);
+
+}
+
+.agenda-header .profile-button{
+
+    --color:var(--ion-color-primary);
+
+}
+
+.agenda-header .notification-button {
+   --color: #F59E0B;
+}
+
+.agenda-header ion-icon{
+
+    font-size:var(--icon-lg);
+
+    transition:var(--transition-fast);
+
+}
+
+.agenda-header .welcome{
+
+    margin-top:var(--space-lg);
+
+}
+
+.agenda-header .greeting{
+
+    margin:0;
+
+    color:var(--color-text-secondary);
+
+    font-size:var(--font-sm);
+
+}
+
+.agenda-header h1{
+
+    margin:var(--space-xs) 0;
+
+    font-size:var(--font-xl);
+
+    font-weight:700;
+
+    color:var(--color-text);
+
+}
+
+.agenda-header span{
+
+    color:var(--color-text-secondary);
+
+    font-size:var(--font-sm);
+
+}
+
+
+/* =====================================================
+   APP TABS
+===================================================== */
+
+.app-tab-bar{
+
+    --background:var(--color-surface);
+
+    border-top:1px solid var(--color-border);
+
+    height:var(--tab-bar-height);
+
+}
+
+.app-tab-bar ion-tab-button{
+
+    --color:var(--color-text-secondary);
+
+    --color-selected:var(--color-primary);
+
+    font-size:var(--font-xs);
+
+    transition:var(--transition-fast);
+
+}
+
+.app-tab-bar ion-icon{
+
+    font-size:var(--icon-md);
+
+}
+
+
+/* =====================================================
+   UTILIDADES
+===================================================== */
+
+.page-container{
+
+    padding-left:var(--screen-padding);
+
+    padding-right:var(--screen-padding);
+
+}
+
+.card{
+
+    background:var(--color-surface);
+
+    border-radius:var(--card-radius);
+
+    padding:var(--card-padding);
+
+    box-shadow:var(--card-shadow);
+
+}
+
+.title{
+
+    color:var(--color-text);
+
+    font-size:var(--font-lg);
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    color:var(--color-text-secondary);
+
+    font-size:var(--font-sm);
+
+}
+/* =====================================================
+   SEGMENT AGENDA
+===================================================== */
+
+.segment-agenda{
+
+    display:flex;
+
+    gap:var(--space-sm);
+
+    padding:var(--space-md) var(--screen-padding);
+
+    background:var(--color-background);
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    white-space:nowrap;
+
+    scrollbar-width:none;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+.segment-agenda::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.segment-item{
+
+    border:none;
+
+    background:transparent;
+
+    color:var(--color-text-secondary);
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:var(--font-sm);
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition-fast);
+
+    flex-shrink:0;
+
+}
+
+@media (max-width:768px){
+
+    .segment-agenda{
+
+        gap:10px;
+
+        padding:12px 16px;
+
+    }
+
+    .segment-item{
+
+        padding:10px 16px;
+
+        font-size:14px;
+
+    }
+
+}
+
+.segment-item.active{
+
+    background:var(--color-primary);
+
+    color:#FFFFFF;
+
+}
+
+.segment-item:hover{
+
+    background:rgba(37,99,235,.08);
+
+}
+
+/* =====================================================
+   DASHBOARD CONTENT
+===================================================== */
+.dashboard-content{
+
+    width:100%;
+    background:var(--color-surface);
+    border-radius:28px 28px 0 0;
+    margin-top:var(--space-sm);
+    padding:var(--space-lg);
+    box-sizing:border-box;
+
+}
+/* =====================================================
+   DASHBOARD CARDS
+===================================================== */
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:var(--space-md);
+    width:100%;
+}
+
+.dashboard-card{
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:22px 16px;
+    border-radius:var(--card-radius);
+    transition:var(--transition-fast);
+    cursor:pointer;
+    min-height:150px;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ---------- Icono ---------- */
+
+.card-icon{
+
+    width:58px;
+    height:58px;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:16px;
+
+}
+
+.card-icon ion-icon{
+
+    font-size:30px;
+
+}
+
+/* ---------- Información ---------- */
+
+.card-info{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.card-info h2{
+
+    margin:0;
+    font-size:38px;
+    font-weight:700;
+    line-height:1;
+
+}
+
+.card-info span{
+
+    margin-top:8px;
+    font-size:14px;
+    font-weight:600;
+
+}
+
+/* =====================================================
+   TARJETA AZUL
+===================================================== */
+
+.dashboard-card.primary{
+
+    background:#EDF4FF;
+
+}
+
+.dashboard-card.primary .card-icon{
+
+    background:#DCEBFF;
+
+}
+
+.dashboard-card.primary ion-icon,
+.dashboard-card.primary h2,
+.dashboard-card.primary span{
+
+    color:var(--color-primary);
+
+}
+
+/* =====================================================
+   TARJETA VERDE
+===================================================== */
+
+.dashboard-card.success{
+
+    background:#EDF9F1;
+
+}
+
+.dashboard-card.success .card-icon{
+
+    background:#D8F5E2;
+
+}
+
+.dashboard-card.success ion-icon,
+.dashboard-card.success h2,
+.dashboard-card.success span{
+
+    color:var(--color-success);
+
+}
+
+/* =====================================================
+   TARJETA NARANJA
+===================================================== */
+
+.dashboard-card.warning{
+
+    background:#FFF6EB;
+
+}
+
+.dashboard-card.warning .card-icon{
+
+    background:#FFE8CC;
+
+}
+
+.dashboard-card.warning ion-icon,
+.dashboard-card.warning h2,
+.dashboard-card.warning span{
+
+    color:var(--color-warning);
+
+}
+
+/* =====================================================
+   TARJETA ROJA
+===================================================== */
+
+.dashboard-card.danger{
+
+    background:#FDEEEE;
+
+}
+
+.dashboard-card.danger .card-icon{
+
+    background:#FAD7D7;
+
+}
+
+.dashboard-card.danger ion-icon,
+.dashboard-card.danger h2,
+.dashboard-card.danger span{
+    color:var(--color-danger);
+}
+
+/* =====================================================
+   PROXIMA CONSULTA
+===================================================== */
+
+.next-consultation{
+    margin-bottom:var(--space-xl);
+}
+
+.section-title{
+    font-size:18px;
+    font-weight:700;
+    color:var(--color-text);
+    margin-bottom:16px;
+}
+
+.consultation-card{
+    background:var(--color-surface);
+    border-radius:var(--card-radius);
+    box-shadow:var(--card-shadow);
+    padding:22px;
+}
+
+.consultation-patient{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:20px;
+}
+
+.consultation-patient ion-icon{
+    font-size:54px;
+    color:var(--color-primary);
+}
+
+.consultation-patient h2{
+    margin:0;
+    font-size:22px;
+    color:var(--color-text);
+}
+
+.consultation-patient p{
+    margin-top:4px;
+    color:var(--color-text-secondary);
+    font-size:14px;
+}
+
+/* ============================= */
+
+.consultation-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--color-text);
+    font-weight:600;
+}
+
+.info-item ion-icon{
+    color:var(--color-primary);
+    font-size:20px;
+}
+
+/* ============================= */
+
+.consultation-location{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding-top:16px;
+    border-top:1px solid var(--color-border);
+    margin-bottom:22px;
+    color:var(--color-text-secondary);
+}
+
+.consultation-location ion-icon{
+    color:var(--color-primary);
+    font-size:20px;
+}
+
+/* ============================= */
+
+/* ==============================
+   ESTADO DE LA CONSULTA
+============================== */
+
+.consultation-status{
+    margin-top:22px;
+    border-top:1px solid var(--color-border);
+    padding-top:18px;
+
+}
+
+.status-title{
+
+    display:block;
+    margin-bottom:12px;
+    font-size:14px;
+    color:var(--color-text-secondary);
+
+}
+
+.btn-status{
+
+    --background:#ECFDF5;
+    --color:var(--color-success);
+    --border-color:#D1FAE5;
+    --border-radius:14px;
+    --padding-start:18px;
+    --padding-end:18px;
+    height:48px;
+    font-weight:600;
+
+}
+
+/* =====================================================
+   AGENDA ITEM
+===================================================== */
+
+.agenda-item{
+
+    background: var(--color-surface);
+
+    border-radius: var(--card-radius);
+
+    box-shadow: var(--card-shadow);
+
+    padding: var(--card-padding);
+
+    margin-bottom: var(--space-md);
+
+}
+
+.agenda-time{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--color-primary);
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.agenda-time ion-icon{
+
+    font-size:18px;
+
+}
+
+.agenda-info h3{
+
+    margin:0;
+
+    color:var(--color-text);
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+.agenda-info p{
+
+    margin-top:4px;
+
+    color:var(--color-text-secondary);
+
+    font-size:14px;
+
+}
+
+.agenda-status{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:18px;
+
+}
+
+/* ===============================
+   BOTÓN DE ESTADO
+================================ */
+
+.status-button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:var(--transition-fast);
+
+}
+
+/* ======================================
+   CHIP DE ESTADO
+====================================== */
+
+.status-chip{
+
+    cursor:pointer;
+
+    border-radius:999px;
+
+    padding:6px 10px;
+
+    transition:var(--transition-fast);
+
+    font-weight:600;
+
+}
+
+.status-chip span{
+
+    margin:0 6px;
+
+    font-size:13px;
+
+}
+
+.status-chip ion-icon{
+
+    font-size:16px;
+
+}
+
+/* ======================================
+   COLORES
+====================================== */
+
+.status-chip.confirmada{
+
+    --background:#ECFDF5;
+
+    --color:var(--status-confirmada);
+
+    --border-color:#D1FAE5;
+
+}
+
+.status-chip.llego{
+
+    --background:#FFFBEB;
+
+    --color:var(--status-pendiente);
+
+    --border-color:#FDE68A;
+
+}
+
+.status-chip.completada{
+
+    --background:#EFF6FF;
+
+    --color:var(--status-completada);
+
+    --border-color:#BFDBFE;
+
+}
+
+.status-chip.cancelada{
+
+    --background:#FEF2F2;
+
+    --color:var(--status-cancelada);
+
+    --border-color:#FECACA;
+
+}
+
+.status-chip.no-asistio{
+
+    --background:#F3F4F6;
+
+    --color:var(--color-text-secondary);
+
+    --border-color:#E5E7EB;
+
+}
+
+/* ESTADOS SELECT */
+/*=====================================================
+  ESTADO CITA SELECT
+=====================================================*/
+
+.estado-chip{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    width:170px;
+    padding:8px 14px;
+    border-radius:999px;
+    cursor:pointer;
+    font-weight:600;
+
+}
+
+.estado-icon{
+    font-size:18px;
+}
+
+.estado-texto{
+    flex:1;
+}
+
+.estado-flecha{
+    font-size:16px;
+    opacity:.6;
+}
+
+.estado-confirmada{
+    background:#ECFDF3;
+    color:#16A34A;
+    border:1px solid #BBF7D0;
+
+}
+
+.estado-agendada{
+    background:#FFF8E8;
+    color:#D97706;
+    border:1px solid #FCD34D;
+
+}
+
+.estado-completada{
+    background:#DCFCE7;
+    color:#15803D;
+    border:1px solid #86EFAC;
+
+}
+
+.estado-cancelada{
+    background:#FEE2E2;
+    color:#DC2626;
+    border:1px solid #FCA5A5;
+}
+
+.estado-inasistencia {
+    background: #FEF3C7;
+    color: #D97706;
+    border: 1px solid #FCD34D;
+}
+
+.estado.finalizada {
+    background: #E0F2FE; /* Azul claro idéntico al ícono */
+    color: #0284C7;      /* Texto azul oscuro contrastante */
+}
+
+.estado-popover::part(content){
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    width:170px;
+    overflow:hidden;
+}
+
+.estado-popover ion-content{
+    --background:white;
+}
+
+.estado-popover ion-list{
+    padding:0;
+}
+
+.estado-popover ion-item{
+    --min-height:42px;
+    --padding-start:14px;
+    --inner-padding-end:14px;
+    font-size:14px;
+}
+
+.estado-popover ion-item:hover{
+    --background:#F3F4F6;
+}
+
+/*======================================
+  Pantalla sin citas
+======================================*/
+
+.sin-citas{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    margin-bottom:40px;
+
+    padding:20px 24px;
+
+}
+
+.sin-citas-icon{
+
+    font-size:60px;
+
+    color:#3B82F6;
+
+    margin-bottom:18px;
+
+}
+
+.sin-citas h2{
+
+    margin:0;
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+   
+
+}
+
+.sin-citas-titulo{
+    color: var(--color-text);
+}
+
+.sin-citas p{
+
+    margin:0;
+
+    margin-bottom:26px;
+
+    max-width:280px;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+
+}
+
+.sin-citas ion-button{
+
+    --border-radius:24px;
+
+    --padding-start:22px;
+
+    --padding-end:22px;
+
+    --border-width:2px;
+
+    --color:#2563EB;
+
+    --border-color:#2563EB;
+
+    text-transform:none;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/*==================================
+CALENDARIO
+===================================*/
+
+.calendar-container {
+
+    background: var(--color-surface);
+
+    border-radius: 24px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+}
+
+
+.calendar-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.calendar-header h2 {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+}
+
+
+.calendar-weekdays {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
+
+    color: var(--color-text-secondary);
+
+}
+
+
+.calendar-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.calendar-day {
+
+    aspect-ratio: 1;
+
+    border-radius: 16px;
+
+    background: var(--color-background);
+
+    cursor: pointer;
+
+    transition: var(--transition-fast);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.calendar-day:hover {
+
+    background: #EEF2FF;
+
+}
+
+
+.calendar-day.hoy {
+
+    border: 2px solid var(--color-primary);
+
+}
+
+
+.calendar-day.seleccionado {
+
+    background: var(--color-primary);
+
+    color: #FFFFFF;
+
+}
+
+
+.calendar-day .numero {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: var(--color-text);
+
+}
+
+
+.calendar-day.seleccionado .numero {
+
+    color: #FFFFFF;
+
+}
+
+
+.badge {
+
+    position: absolute;
+
+    bottom: 6px;
+
+    right: 6px;
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #10B981;
+
+    color: #FFFFFF;
+
+    font-size: 11px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+
+}
+
+
+.calendar-day.vacio {
+
+    background: transparent;
+
+    cursor: default;
+
+    box-shadow: none;
+
+}
+
+
+.indicadores {
+
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    max-width: 100%;
+
+}
+
+
+.punto {
+
+   width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+
+}
+
+
+/* Estados */
+
+.punto.confirmada {
+
+    background: #28a745;
+
+}
+
+.punto.inasistencia {
+    background-color: #ffc409; /* Amarillo / Naranja */
+}
+
+.punto.pendiente, .punto.agendado {
+    background-color: #1a73e8; /* Azul o el color que prefieras */
+}
+
+
+.punto.consulta {
+
+    background: #0d6efd;
+
+}
+
+
+.punto.cancelado, .punto.cancelada {
+    background-color: #eb445a; /* Rojo */
+}
+
+
+.punto.finalizada {
+
+    background-color: #2dd36f;
+
+}
+
+
+.mas {
+
+   font-size: 10px;
+    font-weight: bold;
+    color: #666;
+    line-height: 1
+}
+
+
+.contenido-dia {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    position: relative;
+
+    padding: 10px 0 8px;
+
+}
+
+
+@media (max-width: 768px) {
+
+    .calendar-container {
+
+        background: transparent;
+
+        box-shadow: none;
+
+        border-radius: 0;
+
+        padding: 0;
+
+        margin-top: 10px;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   AGENDA BOTTOM SHEET
+===================================================== */
+
+.agenda-sheet-grabber{
+
+    width:60px;
+    height:6px;
+    border-radius:999px;
+    background:var(--color-border);
+    margin:12px auto 20px;
+
+}
+.agenda-sheet-header h2{
+
+    margin:0 0 6px 0;
+
+}
+.agenda-sheet-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px 12px;
+    border-bottom:1px solid var(--color-border);
+    margin:0;
+
+}
+
+.agenda-sheet-header-info{
+
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+
+}
+
+.agenda-sheet-title{
+
+    margin:0;
+    font-size:var(--font-lg);
+    font-weight:700;
+    color:var(--color-text);
+    text-transform:capitalize;
+
+}
+
+.agenda-sheet-subtitle{
+
+    margin:0;
+    font-size:var(--font-sm);
+    color:var(--color-text-secondary);
+
+}
+
+.agenda-sheet-close{
+
+    --color:var(--color-primary);
+    font-weight:600;
+
+}
+
+.agenda-sheet-body{
+
+    margin:0;
+    overflow-y:auto;
+    flex:1;
+}
+
+.agenda-sheet-empty{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:220px;
+    text-align:center;
+    color:var(--color-text-secondary);
+    font-size:var(--font-md);
+
+}
+
+.agenda-sheet-content{
+    max-width: 760px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media(max-width:768px){
+
+    .agenda-sheet-content{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* =====================================================
+   MODAL AGENDA
+===================================================== */
+
+ion-modal.agenda-modal{
+
+    --width:92%;
+    --max-width:520px;
+    --height:70%;
+    --border-radius:22px;
+    --box-shadow:0 25px 70px rgba(0,0,0,.28);
+
+}
+
+@media (min-width:768px){
+
+    ion-modal.agenda-modal{
+
+        --max-width:700px;
+        --height:75%;
+
+    }
+
+}
+
+/*=====================================================
+LISTA DE CITAS
+=====================================================*/
+
+.lista-citas{
+    
+    padding:0 20px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.cita-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--color-border);
+
+    transition: background-color .2s ease;
+
+
+}
+
+.cita-col{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    min-width:0;
+
+}
+
+.cita-row:hover{
+
+    background:#F8FAFC;
+
+}
+
+.cita-row.selected{
+
+    background:#DBEAFE;
+
+}
+
+.cita-row:active{
+    background:#EEF4FF;
+
+}
+
+.cita-col ion-icon{
+
+    font-size:18px;
+
+    color:var(--color-primary);
+
+}
+
+/* Columnas */
+
+.hora{
+
+    width:90px;
+
+    font-weight:700;
+
+    color:var(--color-primary);
+
+    flex-shrink:0;
+
+}
+
+.paciente{
+
+    flex:1;
+
+    font-weight:600;
+
+    color:var(--color-text);
+
+}
+
+.folio{
+
+    width:160px;
+
+    color:var(--color-text-secondary);
+
+    font-size:14px;
+
+}
+
+.estado-col{
+
+    width:130px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.estado{
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+}
+
+/*=========================
+ESTADOS
+==========================*/
+
+.estado.confirmado{
+
+    background:#DCFCE7;
+
+    color:#16A34A;
+
+}
+
+.estado.agendado{
+
+    background:#DBEAFE;
+
+    color:#2563EB;
+
+}
+
+.estado.completado{
+
+    background:#E5E7EB;
+
+    color:#013485;
+
+}
+
+.estado.cancelado{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+.estado.inasistencia{
+
+    background:#FEF3C7;
+
+    color:#D97706;
+
+}
+
+/*=====================================================
+RESPONSIVE LISTA DE CITAS
+=====================================================*/
+
+@media (max-width: 768px){
+    
+    .cita-row{
+
+        gap:10px;
+
+        padding:14px 0;
+
+    }
+     
+    .folio{
+
+        display:none;
+
+    }
+
+    .hora{
+
+        width:75px;
+
+    }
+
+    .estado-col{
+
+        width:auto;
+
+        margin-left:auto;
+
+    }
+
+}
+
+/*=====================================================
+RESUMEN DEL DÍA
+=====================================================*/
+
+.resumen-dia{
+
+    padding:20px;
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+/* Tarjeta Total */
+
+.resumen-total-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    background:#F8FAFC;
+
+}
+
+.resumen-total-info{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-self:center;
+
+}
+
+.resumen-total-info .titulo{
+
+    display:block;
+
+    margin:0;
+
+    padding:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    color:var(--color-text);
+
+
+}
+
+.resumen-total-info .subtitulo{
+
+    display:block;
+
+    margin-top:2px 0 0;
+
+    font-size:14px;
+
+    line-height:1.2;
+
+    color:var(--color-text-secondary);
+
+}
+
+/* Items */
+
+.resumen-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 0;
+
+}
+
+.resumen-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.resumen-info span{
+
+    font-size:15px;
+
+    color:var(--color-text);
+
+}
+
+.resumen-item strong{
+
+    font-size:16px;
+
+    color:var(--color-text);
+
+}
+
+/* Iconos */
+
+.resumen-icon{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.resumen-icon ion-icon{
+
+    font-size:20px;
+
+}
+
+/* Total */
+
+.resumen-icon.total{
+
+    background:#E8F0FF;
+
+}
+
+.resumen-icon.total ion-icon{
+
+    color:#2563EB;
+
+}
+
+/* Confirmadas */
+
+.resumen-icon.confirmado{
+
+    background:#DCFCE7;
+
+}
+
+.resumen-icon.confirmado ion-icon{
+
+    color:#16A34A;
+
+}
+
+/* Agendadas */
+
+.resumen-icon.agendado{
+
+    background:#DBEAFE;
+
+}
+
+.resumen-icon.agendado ion-icon{
+
+    color:#2563EB;
+
+}
+
+.resumen-icon.finalizada{
+    color: #0284C7;
+    background:#E0F2FE; /* Un tono azul claro o el color que prefieras */
+}
+
+.resumen-icon.finalizado ion-icon{
+
+    color:#0D9488;;
+     background:#E0F2FE;
+}
+
+/* Canceladas */
+
+.resumen-icon.cancelado{
+
+    background:#FEE2E2;
+
+}
+
+.resumen-icon.cancelado ion-icon{
+
+    color:#DC2626;
+
+}
+
+/* Inasistencia */
+
+.resumen-icon.inasistencia{
+
+    background:#FEF3C7;
+
+}
+
+.resumen-icon.inasistencia ion-icon{
+
+    color:#D97706;
+
+}
+
+.agenda-modal-content{
+
+    --padding-top:0;
+
+    --padding-bottom:0;
+
+    --padding-start:0;
+
+    --padding-end:0;
+
+}
+
+/* ===========================
+   DETALLE CITA
+=========================== */  
+
+.detalle-cita-body{
+
+    gap:18px;
+
+}
+/* Grid responsive */
+
+.detalle-grid{
+
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+
+}
+
+.detalle-box{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    padding-bottom:14px;
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.detalle-box-full{
+
+    padding-bottom:14px;
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.detalle-label{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    color:var(--color-text-secondary);
+
+}
+
+.detalle-item-icon{
+
+    font-size:18px;
+
+     color: var(--ion-color-primary);
+
+}
+
+.detalle-value{
+
+    padding-left:26px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--color-text-primary);
+
+    line-height:1.5;
+
+}
+
+/* Tablet */
+
+@media(min-width:768px){
+
+    .detalle-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        column-gap:40px;
+
+    }
+
+}
+
+/* ===========================
+   DETALLE PACIENTE
+=========================== */
+
+.paciente-nombre{
+
+    font-size:22px;
+    font-weight:700;
+
+    color:var(--color-text-primary);
+
+    margin-bottom:16px;
+
+}
+
+.paciente-datos{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.paciente-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--color-text-secondary);
+
+    font-size:15px;
+
+}
+
+@media(min-width:768px){
+
+    .paciente-datos{
+
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+}
+
+/* ==========================================
+   TARJETA BASE
+========================================== */
+
+.detalle-card{
+
+    background: var(--color-card);
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 16px;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.detalle-card-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:18px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--color-text-primary);
+
+}
+
+.detalle-icon{
+
+    font-size:20px;
+
+   color: var(--ion-color-primary);
+}
+
+.detalle-card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ===========================
+   MOTIVO DE LA CITA
+=========================== */
+
+.motivo-cita-body{
+
+    gap:12px;
+
+}
+
+.motivo-texto{
+
+    background:var(--color-background);
+
+    border:1px solid var(--color-border);
+
+    border-radius:12px;
+
+    padding:16px;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:var(--color-text-primary);
+
+    white-space:pre-line;
+
+}
+
+.sin-motivo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--color-text-secondary);
+
+    font-style:italic;
+
+}
+
+.sin-motivo ion-icon{
+
+    font-size:20px;
+
+    color:var(--ion-color-medium);
+
+}
+
+/* ===========================
+   HISTORIAL DE CITAS
+=========================== */
+
+.historial-citas-body{
+
+    gap:18px;
+
+}
+
+.historial-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.historial-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.historial-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.historial-fecha{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--color-text-primary);
+
+}
+
+.historial-detalle{
+
+    font-size:13px;
+
+    color:var(--color-text-secondary);
+
+}
+
+.sin-historial{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--color-text-secondary);
+
+    font-style:italic;
+
+}
+
+.sin-historial ion-icon{
+
+    font-size:20px;
+
+    color:var(--ion-color-medium);
+
+}
+
+.historial-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:none;
+
+    color:var(--ion-color-primary);
+
+    font-size:15px;
+
+    font-weight:600;
+
+    padding-top:8px;
+
+    cursor:pointer;
+
+}
+
+/* ===========================
+   HEADER BACK
+=========================== */
+
+.header-back{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 16px;
+
+    background:var(--color-card);
+
+    border-bottom:1px solid var(--color-border);
+
+}
+
+.back-btn{
+
+    margin:0;
+
+}
+
+.header-back-title{
+
+    margin:0;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:var(--color-text-primary);
+
+}
+
+/* ===========================
+    NOTIFICACIONES
+=========================== */
+
+.notificaciones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+ion-list.notificaciones-container {
+    background: transparent;
+}
+
+/* Forzamos al ion-item a comportarse de manera transparente para que luzca tu tarjeta */
+ion-item.notificacion-ion-item {
+    --background: transparent;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    --inner-padding-start: 0;
+    --min-height: auto;
+    background: transparent;
+}
+
+ion-item-sliding {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.notificacion-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background: var(--color-card, #ffffff);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm, 0 2px 6px rgba(0,0,0,0.05));
+    cursor: pointer;
+    transition: transform .2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.notificacion-item:active {
+    transform: scale(.98);
+}
+
+.notificacion-no-leida {
+    background: #F8FAFC;
+}
+
+.notificacion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.notificacion-icon.nueva-cita {
+    background: #DBEAFE;
+    color: #2563EB;
+}
+
+.notificacion-icon.cita-proxima {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.notificacion-icon.cancelada {
+    background: #FEE2E2;
+    color: #DC2626;
+}
+
+.notificacion-icon.inasistencia {
+    background: #F3F4F6;
+    color: #6B7280;
+}
+
+.notificacion-contenido {
+    flex: 1;
+    min-width: 0;
+}
+
+.notificacion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.notificacion-header h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.notificacion-header span {
+    flex-shrink: 0;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+}
+
+.notificacion-contenido p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+}
+
+.notificacion-indicador {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ion-color-primary);
+    flex-shrink: 0;
+}
+
+/* Estilo para el estado vacío (cuando no hay notificaciones) */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--color-text-secondary);
+}
+
+.empty-icon {
+    font-size: 64px;
+    color: var(--ion-color-primary, #3b82f6);
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0 0 8px 0;
+}
+
+.empty-state p {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin: 0;
+    max-width: 300px;
+}
+
+/* =====================================================
+   PERFIL MÉDICO
+===================================================== */
+
+.perfil-medico {
+
+    padding: var(--space-lg) var(--screen-padding);
+
+    background: var(--color-background);
+
+    min-height: 100%;
+
+}
+
+
+/* =====================================================
+   ENCABEZADO DEL PERFIL
+===================================================== */
+
+.perfil-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: var(--space-xl);
+
+}
+
+
+.perfil-avatar {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 90px;
+
+    height: 90px;
+
+    margin-bottom: var(--space-md);
+
+}
+
+
+.perfil-avatar ion-icon {
+
+    font-size: 90px;
+
+    color: var(--color-primary);
+
+}
+
+
+.perfil-header h1 {
+
+    margin: 0;
+
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+}
+
+
+.perfil-header p {
+
+    margin: var(--space-xs) 0 0;
+
+    font-size: var(--font-md);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.perfil-card {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--card-radius);
+
+    padding: var(--card-padding);
+
+    margin-bottom: var(--space-md);
+
+    box-shadow: var(--card-shadow);
+    text-align: left;
+
+}
+
+
+.perfil-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    padding-bottom: var(--space-md);
+
+    margin-bottom: var(--space-md);
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+
+.perfil-card-header ion-icon {
+
+    font-size: var(--icon-md);
+
+    color: var(--color-primary);
+
+}
+
+
+.perfil-card-header span {
+
+    font-size: var(--font-md);
+
+    font-weight: 600;
+
+    color: var(--color-text);
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.perfil-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-md);
+
+    width: 100%;
+    align-items: flex-start;
+}
+
+
+.info-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-xs);
+
+    width: 100%;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+}
+
+
+.info-label {
+
+    font-size: var(--font-sm);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+.info-value {
+
+    font-size: var(--font-md);
+
+    font-weight: 500;
+
+    color: var(--color-text);
+
+}
+
+/* =====================================================
+   CONFIGURACIÓN
+===================================================== */
+
+.configuracion {
+
+    padding: var(--space-lg) var(--screen-padding);
+
+    background: var(--color-background);
+
+    min-height: 100%;
+
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.config-card {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--card-radius);
+
+    padding: var(--card-padding);
+
+    margin-bottom: var(--space-md);
+
+    box-shadow: var(--card-shadow);
+
+}
+
+
+/* =====================================================
+   ENCABEZADO DE TARJETA
+===================================================== */
+
+.config-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    padding-bottom: var(--space-md);
+
+    margin-bottom: var(--space-md);
+
+    border-bottom: 1px solid var(--color-border);
+
+}
+
+
+.config-card-header ion-icon {
+
+    font-size: var(--icon-md);
+
+    color: var(--color-primary);
+
+}
+
+
+.config-card-header span {
+
+    font-size: var(--font-md);
+
+    font-weight: 600;
+
+    color: var(--color-text);
+
+}
+
+
+/* =====================================================
+   OPCIONES
+===================================================== */
+
+.config-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: var(--space-md);
+
+}
+
+
+.config-item-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-xs);
+
+}
+
+
+.config-item-title {
+
+    font-size: var(--font-md);
+
+    font-weight: 500;
+
+    color: var(--color-text);
+
+}
+
+
+.config-item-description {
+
+    font-size: var(--font-sm);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   ACCIONES
+===================================================== */
+
+.config-action {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    cursor: pointer;
+
+}
+
+
+.config-action-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+}
+
+
+.config-action-info ion-icon {
+
+    font-size: var(--icon-md);
+
+    color: var(--color-primary);
+
+}
+
+
+.config-action-info span {
+
+    font-size: var(--font-md);
+
+    color: var(--color-text);
+
+}
+
+
+.config-action > ion-icon {
+
+    font-size: var(--icon-md);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+===================================================== */
+
+.config-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-sm);
+
+}
+
+
+.config-info span {
+
+    font-size: var(--font-sm);
+
+    color: var(--color-text-secondary);
+
+}
+
+/* 
+CONFIGURACION TEMA OSCURO */
+[data-theme="dark"] {
+
+    --color-background: #0F172A;
+    --color-surface: #1E293B;
+    --color-text: #F8FAFC;
+    --color-text-secondary: #CBD5E1;
+    --color-border: #334155;
+}
+
+/* =====================================================
+   CAMBIAR CONTRASEÑA
+===================================================== */
+
+.cambiar-password {
+
+    padding: var(--space-lg) var(--screen-padding);
+
+    background: var(--color-background);
+
+    min-height: 100%;
+
+}
+
+
+/* =====================================================
+   TARJETA
+===================================================== */
+
+.password-card {
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--card-radius);
+
+    padding: var(--card-padding);
+
+    box-shadow: var(--card-shadow);
+
+}
+
+
+/* =====================================================
+   ICONO
+===================================================== */
+
+.password-icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: var(--space-md);
+
+}
+
+
+.password-icon ion-icon {
+
+    font-size: var(--icon-xl);
+
+    color: var(--color-primary);
+
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.password-card h1 {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: var(--font-lg);
+
+    color: var(--color-text);
+
+}
+
+
+.password-description {
+
+    margin: var(--space-sm) 0 var(--space-lg);
+
+    text-align: center;
+
+    font-size: var(--font-sm);
+
+    line-height: 1.5;
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.password-field {
+
+    margin-bottom: var(--space-md);
+
+}
+
+
+.password-field label {
+
+    display: block;
+
+    margin-bottom: var(--space-xs);
+
+    font-size: var(--font-sm);
+
+    font-weight: 600;
+
+    color: var(--color-text);
+
+}
+
+
+.password-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    padding-left: var(--space-sm);
+}
+
+
+.password-input ion-input {
+     flex: 1;
+    --color: var(--color-text);
+
+    --placeholder-color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.password-button {
+
+    margin-top: var(--space-lg);
+
+    --background: var(--color-primary);
+
+    --color: #FFFFFF;
+
+    --border-radius: var(--radius-md);
+
+    font-weight: 600;
+
+}
+
+.password-toggle {
+
+    --color: var(--color-text-secondary);
+
+    margin: 0;
+
+}
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.login-container {
+
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: var(--space-xl) var(--screen-padding);
+
+    background: var(--color-background);
+
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.login-header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    margin-bottom: var(--space-xl);
+
+}
+
+
+.login-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 80px;
+
+    height: 80px;
+
+    margin-bottom: var(--space-md);
+
+    border-radius: 24px;
+
+    background: var(--color-primary);
+
+}
+
+
+.login-logo ion-icon {
+
+    font-size: 46px;
+
+    color: #FFFFFF;
+
+}
+
+
+.login-header h1 {
+
+    margin: 0;
+
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+}
+
+
+.login-header p {
+
+    margin: 0;
+
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    color: var(--color-primary);
+
+}
+
+
+.login-header span {
+
+    margin-top: var(--space-sm);
+
+    font-size: var(--font-sm);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+
+.login-form {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0 auto;
+
+}
+
+
+.login-field {
+
+    margin-bottom: var(--space-md);
+
+}
+
+
+.login-field label {
+
+    display: block;
+
+    margin-bottom: var(--space-xs);
+
+    font-size: var(--font-sm);
+
+    font-weight: 600;
+
+    color: var(--color-text);
+
+}
+
+
+.login-input {
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 52px;
+
+    padding: 0 var(--space-sm);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+
+}
+
+
+.login-input > ion-icon {
+
+    margin-right: var(--space-sm);
+
+    font-size: var(--icon-md);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+.login-input ion-input {
+
+    flex: 1;
+
+    --color: var(--color-text);
+
+    --placeholder-color: var(--color-text-secondary);
+
+}
+
+
+.password-toggle {
+
+    --color: var(--color-text-secondary);
+
+    margin: 0;
+
+}
+
+
+/* =====================================================
+   RECUPERACIÓN
+===================================================== */
+
+.forgot-password {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: var(--space-lg);
+
+}
+
+
+.forgot-password span {
+
+    font-size: var(--font-sm);
+
+    font-weight: 600;
+
+    color: var(--color-primary);
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.login-button {
+
+    margin: 0;
+
+    --background: var(--color-primary);
+
+    --color: #FFFFFF;
+
+    --border-radius: var(--radius-md);
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   PIE
+===================================================== */
+
+.login-footer {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--space-xs);
+
+    margin-top: var(--space-xl);
+
+    text-align: center;
+
+}
+
+
+.login-footer span {
+
+    font-size: var(--font-xs);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+.login-footer small {
+
+    font-size: var(--font-xs);
+
+    color: var(--color-text-secondary);
+
+}
+
+/* =====================================================
+   SPLASH SCREEN
+===================================================== */
+
+.splash-container {
+
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: var(--space-xl) var(--screen-padding);
+
+    background: var(--color-background);
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.splash-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 110px;
+
+    height: 110px;
+
+    margin-bottom: var(--space-lg);
+
+    border-radius: 32px;
+
+    background: var(--color-primary);
+
+    box-shadow: var(--card-shadow);
+
+}
+
+
+.splash-logo ion-icon {
+
+    font-size: 64px;
+
+    color: #FFFFFF;
+
+}
+
+
+/* =====================================================
+   MARCA
+===================================================== */
+
+.splash-brand h1 {
+
+    margin: 0;
+
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+}
+
+
+.splash-brand h2 {
+
+    margin: var(--space-xs) 0 0;
+
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    color: var(--color-primary);
+
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+===================================================== */
+
+.splash-subtitle {
+
+    margin: var(--space-md) 0 0;
+
+    font-size: var(--font-sm);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   CARGA
+===================================================== */
+
+.splash-loading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-sm);
+
+    margin-top: var(--space-xl);
+
+    color: var(--color-text-secondary);
+
+}
+
+
+.splash-loading ion-spinner {
+
+    width: 20px;
+
+    height: 20px;
+
+    color: var(--color-primary);
+
+}
+
+
+.splash-loading span {
+
+    font-size: var(--font-sm);
+
+}
+
+
+/* =====================================================
+   VERSIÓN
+===================================================== */
+
+.splash-version {
+
+    position: absolute;
+
+    bottom: var(--space-lg);
+
+    font-size: var(--font-xs);
+
+    color: var(--color-text-secondary);
+
+}
+
+/* =====================================================
+   SIN INTERNET
+===================================================== */
+
+.sin-internet-container {
+
+    min-height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: var(--space-xl) var(--screen-padding);
+
+    background: var(--color-background);
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   ICONO
+===================================================== */
+
+.sin-internet-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 110px;
+
+    height: 110px;
+
+    margin-bottom: var(--space-lg);
+
+    border-radius: 50%;
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    box-shadow: var(--card-shadow);
+
+}
+
+
+.sin-internet-icon ion-icon {
+
+    font-size: 64px;
+
+    color: var(--color-warning);
+
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.sin-internet-container h1 {
+
+    margin: 0;
+
+    font-size: var(--font-lg);
+
+    font-weight: 700;
+
+    color: var(--color-text);
+
+}
+
+
+.sin-internet-container p {
+
+    max-width: 320px;
+
+    margin: var(--space-md) 0 0;
+
+    font-size: var(--font-sm);
+
+    line-height: 1.5;
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.retry-button {
+
+    margin-top: var(--space-xl);
+
+    --background: var(--color-primary);
+
+    --color: #FFFFFF;
+
+    --border-radius: var(--radius-md);
+
+    font-weight: 600;
+
+}
+
+/* Ajusta el contenedor de la opción para que se alinee y tenga un ancho controlado */
+ion-item-options {
+    border: none;
+    background: transparent;
+}
+
+/* Da forma de botón moderno al ion-item-option en lugar de un bloque completo */
+ion-item-option {
+    --background: #2dd36f; /* Color verde success */
+    --color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 8px;
+    margin: 4px 8px;
+    height: calc(100% - 8px);
+}
+
+.error-text {
+    display: block;
+    color: #ef4444;
+    font-size: 0.875rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}

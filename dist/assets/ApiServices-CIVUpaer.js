@@ -1,0 +1,1 @@
+import{U as e}from"./index-BubELFca.js";var t=e.create({baseURL:`http://163.192.138.122:8000`,headers:{Accept:`application/json`,"Content-Type":`application/json`}});t.interceptors.request.use(e=>{let t=localStorage.getItem(`token`);return t&&(e.headers.Authorization=`Bearer ${t}`),e});export{t};

@@ -1,0 +1,146 @@
+/* =====================================================
+   VARIABLES GLOBALES
+   Consultorio Online Inteligente
+===================================================== */
+
+:root {
+
+  /* =====================================================
+     COLORES DEL SISTEMA
+  ===================================================== */
+
+  --color-primary: #2563EB;
+  --color-secondary: #0F172A;
+
+  /* Fondos */
+
+  --color-background: #F4F7FA;
+  --color-surface: #FFFFFF;
+
+  /* Texto */
+
+  --color-text: #1F2937;
+  --color-text-secondary: #6B7280;
+
+  /* Bordes */
+
+  --color-border: #E5E7EB;
+
+  /* Estados */
+
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-danger: #DC2626;
+
+  /* =====================================================
+     ESTADOS DE CITAS
+  ===================================================== */
+
+  --status-confirmada: #16A34A;
+  --status-pendiente: #F59E0B;
+  --status-cancelada: #DC2626;
+  --status-completada: #2563EB;
+
+  /* =====================================================
+     TIPOGRAFÍA
+  ===================================================== */
+
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 22px;
+  --font-xl: 32px;
+
+  /* =====================================================
+     ESPACIADOS
+  ===================================================== */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Padding General */
+
+  --screen-padding: 20px;
+
+  /* =====================================================
+     TARJETAS
+  ===================================================== */
+
+  --card-padding: 18px;
+
+  --card-radius: 18px;
+
+  --card-shadow: 0 4px 12px rgba(15,23,42,.08);
+
+  /* =====================================================
+     BORDES
+  ===================================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* =====================================================
+     ICONOS
+  ===================================================== */
+
+  --icon-sm: 18px;
+  --icon-md: 22px;
+  --icon-lg: 24px;
+  --icon-xl: 32px;
+
+  /* =====================================================
+     ALTURAS
+  ===================================================== */
+
+  --tab-bar-height: 70px;
+
+  --header-height: 140px;
+
+  /* =====================================================
+     ANIMACIONES
+  ===================================================== */
+
+  --transition-fast: .2s ease;
+
+  --transition-normal: .3s ease;
+
+  /* =====================================================
+     IONIC
+  ===================================================== */
+
+  --ion-background-color: var(--color-background);
+
+  --ion-text-color: var(--color-text);
+
+  --ion-item-background: var(--color-surface);
+
+  --ion-color-primary: var(--color-primary);
+
+  --ion-color-success: var(--color-success);
+
+  --ion-color-warning: var(--color-warning);
+
+  --ion-color-danger: var(--color-danger);
+
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+[data-theme="dark"] {
+
+    --color-background:#0F172A;
+
+    --color-surface:#1E293B;
+
+    --color-text:#F8FAFC;
+
+    --color-text-secondary:#CBD5E1;
+
+}
+
