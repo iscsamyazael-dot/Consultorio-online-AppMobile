@@ -4,9 +4,11 @@ const routes = [
   { path: '/', redirect: '/splash' },
   { path: '/splash', component: () => import('../views/SplashView.vue')},
   { path: '/sin-internet', component: () => import('../views/SinInternetView.vue')},
+  { path: '/login', component: () => import('../views/LoginView.vue')},
   {
     path: '/',
     component: AppTabs, // El layout envolvente
+    meta: { requiresAuth: true },
     children: [
       { path: 'dashboard', component: () => import('../views/DashboardAgenda.vue'),meta: { requiresAuth: true } },
       { path: 'agenda', component: () => import('../views/AgendaView.vue'),meta: { requiresAuth: true } },
@@ -16,7 +18,7 @@ const routes = [
       { path: 'perfil', component: () => import('../views/PerfilMedicoView.vue'),meta: { requiresAuth: true }},
       { path: 'configuracion', component: () => import('../views/ConfiguracionView.vue'),meta: { requiresAuth: true }},
       { path: 'cambiar-password', component: () => import('../views/CambiarPasswordView.vue'),meta: { requiresAuth: true }},
-      { path: 'login', component: () => import('../views/LoginView.vue')}
+      
     ]
   }
 ];

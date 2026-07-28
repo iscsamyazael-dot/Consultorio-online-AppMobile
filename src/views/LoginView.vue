@@ -106,7 +106,7 @@
 <script setup>
     import { ref } from 'vue'
     import { useRouter } from 'vue-router'
-    import apiServices from '@/services/apiServices' // Importamos apiService para el consumo de las apis
+    import apiServices from '@/services/ApiServices' // Importamos apiService para el consumo de las apis
     
     import {
         IonPage,

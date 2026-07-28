@@ -89,7 +89,7 @@
 </template>
 
 <script setup>
-import apiServices from '@/services/apiServices' // Importa tu servicio
+import apiServices from '@/services/ApiServices' // Importa tu servicio
 import { useRouter } from 'vue-router'
 import { menuController } from '@ionic/vue' // Importa menuController
 import {
@@ -134,15 +134,20 @@ const irConfiguracion = async () => {
 // Funcion para cerrar la sesion del login
 const cerrarSesion = async () => {
     try {
-        // Opcional: Avisar al backend que invalide el token
+        // 1. Opcional: Avisar al backend que invalide el token
         await apiServices.post('/api/ionic/logout')
     } catch (error) {
         console.error("Error al cerrar sesión", error)
     } finally {
-        // Esto es lo más importante:
+        // 2. Limpiamos el almacenamiento local y cualquier caché de sesión
         localStorage.removeItem('token')
+        localStorage.clear()
+        
+        // 3. Cerramos el menú lateral obligatoriamente
         await menuController.close()
-        router.push('/login')
+
+        // 4. EL CAMBIO CLAVE: Forzamos recarga total para destruir la instancia de AppTabs y su caché
+        window.location.href = '/login'
     }
 }
 

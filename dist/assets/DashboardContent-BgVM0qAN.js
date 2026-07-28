@@ -1,0 +1,1 @@
+import{Et as e,Ot as t,St as n}from"./index-DtBCMAtV.js";var r=(e,t)=>{let n=e.__vccOpts||e;for(let[e,r]of t)n[e]=r;return n},i={},a={class:`dashboard-content`};function o(r,i){return e(),n(`div`,a,[t(r.$slots,`default`)])}var s=r(i,[[`render`,o]]);export{s as t};
